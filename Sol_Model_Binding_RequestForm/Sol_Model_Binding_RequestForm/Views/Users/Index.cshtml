@@ -1,0 +1,33 @@
+﻿@model Sol_Model_Binding_RequestForm.Models.UserModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<form asp-controller="Users" asp-action="OnSubmit">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <label id="txtFirstName">FirstName:</label>
+                    <input id="txtFirstName"  type="text" class="form-control" asp-for="FirstName" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <label id="txtLastName">LastName:</label>
+                    <input id="txtLastName"  type="text" class="form-control" asp-for="LastName" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                  <input id="btnSubmit" type="submit" name="btnSubmit" class="btn btn-primary" value="Submit" />
+                   <input id="hiddenField" type="hidden" name="hiddenField" value="SOME_VALUE" />
+            </div>
+        </div>
+    </div>
+</form>
